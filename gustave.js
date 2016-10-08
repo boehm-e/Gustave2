@@ -17,7 +17,7 @@ gustave.init()
 /*EXIT HANDLER*/
 function exitHandler(options, err) {
     console.log("EXITING")
-    speech_recognition.kill();
+//    speech_recognition.kill();
     if (options.cleanup) console.log('clean');
     if (err) console.log(err.stack);
     if (options.exit) process.exit();
