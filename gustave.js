@@ -4,10 +4,7 @@ var speech_recognition = require('./system/speech_recognition')
 
 gustave.init()
 .then((success) => {
-  // START SPEECH RECOGNITION
-  // speech_recognition.start(gustave);
-
-  gustave.ask('ecouter quand on arrive en ville');
+  gustave.ask('ecouter mon fils ma bataille');
 })
 .catch(function(err){
   return console.log("ERROR LOADING GUSTAVE : ",err)

@@ -66,6 +66,7 @@ var play = (string, label) => {
     getYoutubeLink(string)
     .then((youtubePath) => {
       launchSong(youtubePath);
+      console.log(youtubePath)
       return resolve("lecture")
     });
   })
