@@ -15,8 +15,8 @@ var micInputStream = micInstance.getAudioStream();
 
 
 const d = new SnowboyDetect({
-  resource: "/home/pi/Gustave2/node_modules/snowboy-detect/resources/common.res",
-  model: "/home/pi/Downloads/snowboy.pmdl",
+  resource: "/home/erwan/Desktop/Gustave2/node_modules/snowboy-detect/resources/common.res",
+  model: "/home/erwan/Desktop/Gustave2/node_modules/snowboy-detect/resources/snowboy.umdl",
   sensitivity: "0.5",
   audioGain: 1.0
 });
@@ -33,11 +33,11 @@ micInputStream.on('data', function(data) {
 
 	console.log("LAST : ", asr.lastMsg())
 	asr.strm(new Buffer(data, 'binary'));
-	
+
 	if (last == asr.lastMsg()) {
 	    iteration++;
 	}
-	
+
 	if (iteration >= 20) {
 	    // ask gustave
 	    gustave.ask(asr.lastMsg())
@@ -68,8 +68,8 @@ d.on('hotword', function (index) {
 var start = function(_gustave) {
     gustave = _gustave;
     micInstance.start();
-    micInputStream.pipe(d);	
-} 
+    micInputStream.pipe(d);
+}
 
 var kill = function() {
     micInstance.stop();

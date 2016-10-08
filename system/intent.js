@@ -16,8 +16,8 @@ exports.init = function() {
                 var modulePath = path.join(__dirname, '../gustave_modules', module, 'index.js');
                 var phrase = path.join(__dirname, '../gustave_modules', module, 'phrase.json');
 
-                try {
                     gustaveModules[module] = require(modulePath);
+                    try {
                 } catch (err) {
                     reject(err);
                 }
@@ -61,12 +61,11 @@ exports.ask = (question) => {
     var subLabel = classifier.classify(question).split('-')[1] || null;
     console.log("CLASSIFICATION : ",label);
     var res = gustaveModules[label];
-
     res.start(gustaveSystem ,question, subLabel)
     .then((response) => {
         console.log("RESPONSE", response);
     })
     .catch(function(err){
-        console.log("ERROR RUNNING MODULE :" + clas +' '+ err)
+        gustaveSystem.error("ERROR RUNNING MODULE :" + label +' '+ err)
     });
 }

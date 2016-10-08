@@ -1,0 +1,12 @@
+[
+    {"text":"écouter qqqq","label":"music-playSong"},
+    {"text":"écoutez qqqq","label":"music-playSong"},
+    {"text":"écoutez qqqq","label":"music-playSong"},
+    {"text":"écoutez qqqq","label":"music-playSong"},
+    {"text":"écoutez qqqq","label":"music-playSong"},
+    {"text":"écoutez qqqq","label":"music-playSong"},
+    {"text":"mets de la musique", "label":"music-playSong"},
+    {"text":"coupe le son","label":"music-killSong"},
+    {"text":"arrête la musique","label":"music-killSong"},
+    {"text":"arrête le son","label":"music-killSong"}
+]
