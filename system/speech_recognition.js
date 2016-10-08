@@ -71,4 +71,9 @@ var start = function(_gustave) {
     micInputStream.pipe(d);	
 } 
 
+var kill = function() {
+    micInstance.stop();
+}
+
 exports.start = start;
+exports.kill = kill;
