@@ -34,6 +34,7 @@
     "lame": "^1.2.4",
     "mic": "^2.1.1",
     "natural": "^0.4.0",
+    "node-wit": "^4.1.0",
     "project-oxford": "^1.5.0",
     "request": "^2.75.0",
     "require-reload": "^0.2.2",
