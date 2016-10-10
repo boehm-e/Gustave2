@@ -53,6 +53,7 @@ var launchSong = (path) => {
   });
   var converter = ffmpeg(dl).format('mp3').pipe(new lame.Decoder())
   .on('format', function (format) {
+    console.log("FORMAT : ", format);
     this.pipe(new Speaker(format));
   });
 }

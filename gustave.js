@@ -4,7 +4,9 @@ var gustave = require('./system/intent');
 
 gustave.init()
 .then((success) => {
-  gustave.ask('ecouter mon fils ma bataille');
+  console.log("READY TO ROCK !")
+  // gustave.ask('ecouter in the end');
+   gustave.system.tts("coucou, comment vas tu?")
 })
 .catch(function(err){
   return console.log("ERROR LOADING GUSTAVE : ",err)
