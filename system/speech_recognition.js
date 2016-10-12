@@ -15,8 +15,8 @@ var micInputStream = micInstance.getAudioStream();
 
 
 const d = new SnowboyDetect({
-  resource: "/home/erwan/Desktop/Gustave2/node_modules/snowboy-detect/resources/common.res",
-  model: "/home/erwan/Desktop/Gustave2/node_modules/snowboy-detect/resources/snowboy.umdl",
+  resource: "/home/pi/Gustave2/node_modules/snowboy-detect/resources/common.res",
+  model: "/home/pi/Gustave2/node_modules/snowboy-detect/resources/snowboy.umdl",
   sensitivity: "0.5",
   audioGain: 1.0
 });

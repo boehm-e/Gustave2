@@ -1,11 +1,12 @@
 var gustave = require('./system/intent');
-//var speech_recognition = require('./system/speech_recognition')
+var speech_recognition = require('./system/speech_recognition')
 
 
 gustave.init()
 .then((success) => {
-  console.log("READY TO ROCK !")
-  // gustave.ask('ecouter in the end');
+    speech_recognition.start();
+    console.log("READY TO ROCK !")
+   gustave.ask('ecouter in the end');
    gustave.system.tts("coucou, comment vas tu?")
 })
 .catch(function(err){
